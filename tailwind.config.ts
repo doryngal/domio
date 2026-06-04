@@ -24,12 +24,12 @@ const config: Config = {
         },
       },
       fontFamily: {
-        // Body, UI, cards — Onest has full Cyrillic + Latin + numerals
-        sans: ["var(--font-onest)", "system-ui", "sans-serif"],
-        onest: ["var(--font-onest)", "sans-serif"],
-        // Display headings — Unbounded for bold impact
-        display: ["var(--font-unbounded)", "sans-serif"],
-        unbounded: ["var(--font-unbounded)", "sans-serif"],
+        // Body, UI, cards — Onest Variable (full Cyrillic + Latin + numerals)
+        sans: ["'Onest Variable'", "Onest", "system-ui", "sans-serif"],
+        onest: ["'Onest Variable'", "Onest", "sans-serif"],
+        // Display headings — Unbounded (geometric, full Cyrillic)
+        display: ["Unbounded", "sans-serif"],
+        unbounded: ["Unbounded", "sans-serif"],
       },
       fontSize: {
         "display-xl": ["clamp(2.8rem, 7.5vw, 7rem)", { lineHeight: "1.0", letterSpacing: "-0.02em" }],
