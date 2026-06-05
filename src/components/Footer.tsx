@@ -78,7 +78,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-[#2a2a2a] flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-[#888880]/40 text-xs">
-            © 2025 Domio. Все права защищены.
+            © 2026 Domio. Все права защищены.
           </p>
           <p className="text-[#888880]/40 text-xs">
             Сделано с вниманием к деталям
