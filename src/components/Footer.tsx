@@ -27,7 +27,7 @@ export default function Footer() {
             </a>
             <p className="text-[#888880] text-sm leading-relaxed max-w-xs">
               Профессиональные сайты для малого бизнеса в Казахстане.
-              Готово за 7 дней, от 20 000 ₸.
+              Готово за 1 день, от 20 000 ₸.
             </p>
             <div className="flex items-center gap-1.5 mt-4 text-[#888880] text-xs">
               <MapPin size={12} className="text-[#C9A84C]/60" />

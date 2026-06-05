@@ -212,8 +212,8 @@ export default function Hero() {
           className="text-[#888880] text-lg md:text-xl max-w-xl leading-relaxed mb-10 font-onest"
         >
           Создаём профессиональные сайты для малого бизнеса в Казахстане.
-          Готово за{" "}
-          <span className="text-[#C9A84C]">7 дней</span>, от{" "}
+          Готово{" "}
+          <span className="text-[#C9A84C]">за 1 день</span>, от{" "}
           <span className="text-[#C9A84C]">20 000 ₸</span>.
         </motion.p>
 
@@ -251,8 +251,7 @@ export default function Hero() {
         >
           {[
             { target: 50, suffix: "+", label: "Сайтов запущено" },
-            { target: 7, suffix: " дней", label: "Средний срок" },
-            { target: 100, suffix: "%", label: "Клиентов довольны" },
+            { target: 1, suffix: " день", label: "Срок готовности" },
           ].map((stat) => (
             <div key={stat.label} className="flex flex-col gap-1">
               <Counter target={stat.target} suffix={stat.suffix} duration={1800} />

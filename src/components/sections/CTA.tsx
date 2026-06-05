@@ -83,7 +83,7 @@ export default function CTA() {
           <h2 className="font-display text-[clamp(2.2rem,5.5vw,4.5rem)] font-black text-[#f5f0e8] tracking-tight leading-tight mb-6">
             Ваш сайт будет готов
             <br />
-            <span className="text-gold-gradient-animated">через 7 дней</span>
+            <span className="text-gold-gradient-animated">за 1 день</span>
           </h2>
 
           <p className="text-[#888880] text-lg max-w-lg mx-auto leading-relaxed mb-10">
