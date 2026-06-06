@@ -36,3 +36,6 @@ next-env.d.ts
 
 # Claude Code internals
 .claude/
+
+# Nested sub-project (has its own git repo: github.com/doryngal/domio-shops)
+domio-shops/
