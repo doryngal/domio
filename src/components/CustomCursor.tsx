@@ -9,12 +9,19 @@ export default function CustomCursor() {
   const [hovering, setHovering] = useState(false);
   const [clicking, setClicking] = useState(false);
   const [mounted, setMounted] = useState(false);
+  // visible only after first real mousemove, hidden on touch
+  const [visible, setVisible] = useState(false);
 
   const pos = useRef({ mx: 0, my: 0, rx: 0, ry: 0 });
   const raf = useRef<number>(0);
 
   useEffect(() => {
-    if (!window.matchMedia("(pointer: fine)").matches) return;
+    // Only on true mouse devices (pointer: fine AND hover: hover)
+    // Excludes phones, tablets, and hybrid touch-primary devices
+    const isMouseDevice =
+      window.matchMedia("(pointer: fine) and (hover: hover)").matches;
+    if (!isMouseDevice) return;
+
     setMounted(true);
 
     const tick = () => {
@@ -35,7 +42,13 @@ export default function CustomCursor() {
     const onMove = (e: MouseEvent) => {
       pos.current.mx = e.clientX;
       pos.current.my = e.clientY;
+      // Show cursor only after first real mouse movement
+      setVisible(true);
     };
+
+    // Hide cursor when user switches to touch (hybrid devices)
+    const onTouch = () => setVisible(false);
+
     const onDown = () => setClicking(true);
     const onUp = () => setClicking(false);
 
@@ -47,17 +60,18 @@ export default function CustomCursor() {
     };
 
     window.addEventListener("mousemove", onMove);
+    window.addEventListener("touchstart", onTouch, { passive: true });
     window.addEventListener("mousedown", onDown);
     window.addEventListener("mouseup", onUp);
     attach();
     raf.current = requestAnimationFrame(tick);
 
-    // Re-attach on DOM mutations (for dynamically added elements)
     const observer = new MutationObserver(attach);
     observer.observe(document.body, { childList: true, subtree: true });
 
     return () => {
       window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("touchstart", onTouch);
       window.removeEventListener("mousedown", onDown);
       window.removeEventListener("mouseup", onUp);
       cancelAnimationFrame(raf.current);
@@ -80,16 +94,17 @@ export default function CustomCursor() {
           marginTop: -2.5,
           borderRadius: "50%",
           background: "#C9A84C",
-          opacity: hovering ? 0 : 1,
+          opacity: !visible || hovering ? 0 : 1,
           transform: "scale(1)",
           transition: "opacity 0.2s ease",
         }}
       />
 
-      {/* Ring wrapper — lerp follow */}
+      {/* Ring wrapper — lerp follow, hidden until first mousemove or on touch */}
       <div
         ref={ringWrapRef}
         className="fixed top-0 left-0 pointer-events-none z-[9998] will-change-transform"
+        style={{ opacity: visible ? 1 : 0, transition: "opacity 0.3s ease" }}
       >
         {/* Ring inner — handles size transitions centred via -50% -50% */}
         <div
