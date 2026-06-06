@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { MessageCircle, ArrowDown } from "lucide-react";
 
 const WHATSAPP_URL =
-  "https://wa.me/77001234567?text=Привет! Хочу узнать про сайт для бизнеса";
+  "https://wa.me/87474387417?text=Привет! Хочу узнать про сайт для бизнеса";
 
 // ─── Word reveal ──────────────────────────────────────────────────────────────
 function RevealText({

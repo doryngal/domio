@@ -57,7 +57,7 @@ export default function Navbar() {
 
           {/* CTA */}
           <a
-            href="https://wa.me/77001234567?text=Привет! Хочу сайт для бизнеса"
+            href="https://wa.me/87474387417?text=Привет! Хочу сайт для бизнеса"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:flex btn-gold items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold"
@@ -106,7 +106,7 @@ export default function Navbar() {
             </ul>
             <div className="px-6 mt-4">
               <a
-                href="https://wa.me/77001234567?text=Привет! Хочу сайт для бизнеса"
+                href="https://wa.me/87474387417?text=Привет! Хочу сайт для бизнеса"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMenuOpen(false)}

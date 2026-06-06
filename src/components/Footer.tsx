@@ -12,7 +12,7 @@ const navLinks = [
 ];
 
 const WHATSAPP_URL =
-  "https://wa.me/77001234567?text=Привет! Хочу сайт для бизнеса";
+  "https://wa.me/87474387417?text=Привет! Хочу сайт для бизнеса";
 
 export default function Footer() {
   return (

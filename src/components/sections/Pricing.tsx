@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Check, MessageCircle, Zap, ShieldCheck } from "lucide-react";
 
 const WHATSAPP_URL =
-  "https://wa.me/77001234567?text=Привет! Хочу заказать сайт за 20 000 ₸";
+  "https://wa.me/87474387417?text=Привет! Хочу заказать сайт за 20 000 ₸";
 
 const included = [
   "Дизайн под ваш бренд",
