@@ -153,8 +153,8 @@ export default function Hero() {
       {/* Parallax grid */}
       <div
         ref={gridRef}
-        className="absolute inset-[-10%] pointer-events-none will-change-transform"
-        style={{
+        className="absolute inset-0 pointer-events-none will-change-transform"
+        style={{ overflow: "hidden",
           backgroundImage:
             "linear-gradient(rgba(201,168,76,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.06) 1px, transparent 1px)",
           backgroundSize: "90px 90px",
