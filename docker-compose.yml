@@ -23,7 +23,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=traefik-public"
-      - "traefik.http.routers.domio.rule=Host(`domio.top`) || Host(`www.domio.top`)"
+      - "traefik.http.routers.domio.rule=Host(`domio.top`)"
       - "traefik.http.routers.domio.entrypoints=websecure"
       - "traefik.http.routers.domio.tls=true"
       - "traefik.http.routers.domio.tls.certresolver=myresolver"
